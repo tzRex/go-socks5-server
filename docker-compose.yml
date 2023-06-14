@@ -1,0 +1,12 @@
+version: '3.5'
+
+services:
+  goproxy:
+    build: ./
+    image: rex/goproxy
+    restart: always
+    environment:
+      TZ: Asia/Shanghai
+    ports:
+      - "10084:10084"
+      - "10080:10080"
